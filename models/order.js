@@ -11,7 +11,7 @@ const postSchema = mongoose.Schema({
     product_fees: String,
     customer_region: String,
     product_userId: String,
-    image: String,
+    image:[String],
     customer_district: String,
     customer_adress: String,
     customer_pnone: String,
