@@ -25,7 +25,7 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 .catch((error) => console.log(`${error} did not connect`));
 //Cross Origin Handle Middleware
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.header('Access-Control-Allow-Headers', 
   'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   );
