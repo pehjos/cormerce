@@ -25,9 +25,9 @@ export const getPostsBySearch = async (req, res) => {
     const { searchQuery} = req.query;
 
     try {
-        const title = new RegExp(searchQuery, "i");
+        const product_title = new RegExp(searchQuery, "i");
 
-        const posts = await PostMessage.find({ $or: [ { title } ]});
+        const posts = await PostMessage.find({ $or: [ { product_title } ]});
 
         res.json({ data: posts });
     } catch (error) {    
